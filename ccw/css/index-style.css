@@ -1,260 +1,335 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-body {
-	background: #fbfaf5;
-}
-ul, ol {
-	list-style: none;
-}
-a:link {
-	text-decoration: none;
-}
+/*
+ * ChuanChengWang
+ *
+ * @author    Lancelot at EcjtuNet
+ * @version   1.0
+ * @last-time 2014.7.18
+ *
+ */
+/* file loading
+ ------------------------------------ */
+/*           CSS Reset           */
+/*
+ * http://meyerweb.com/eric/tools/css/reset/    v2.0 | 20110126
+ * License: none (public domain)
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summarytime, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a, a:link, a:visited {
+  text-decoration: none; }
+
+/* color
+ ------------------------------------- */
+/* font
+ ------------------------------------ */
+/* layout
+ ------------------------------------ */
+/* path
+ ------------------------------------ */
 header {
-	width: 100%;
-	height: 72px;
-	background: #f2f2f0;
-}
-	nav {
-		width: 960px;
-		margin: 0 auto;
-	}
-		nav h1 {
-			display: inline-block;
-			height: 72px;
-			line-height: 72px;
-			padding-left: 48px;
-			color: #7e7e8e;
-			background: url(../images/logo/logo.png) left center no-repeat;
-			font-size: 48px;
-			font-weight: normal;
-			font-family: Times, sans-serif;
-		}
-			nav h1 a {
-				color: #7e7e8e;
-				transition: text-shadow .5s;
-			}
-			nav h1 a:hover, nav h1 a:active {
-				text-shadow: 0 1px 2px rgba(0,0,0,.3);
-			}
-			nav h1 a#inherit {
-				letter-spacing: .05em;
-				font-size: 48px;
-				font-weight: normal;
-				font-family: "幼圆", Microsoft Yahei, Arial, sans-serif;
-			}
-			nav h1 a#sort {
-				padding-right: 12px;
-				letter-spacing: .05em;
-				font-size: 32px;
-				font-weight: normal;
-				font-family: Microsoft Yahei, "黑体", Arial, sans-serif;
-			}
-				.slideDown {
-					display: inline-block;
-					position: relative;
-					top: -10px;
-					right: -6px;
-					width: 0;
-					height: 0;
-					border-top: 3px solid #7e7e8e;
-					border-left: 4px solid transparent;
-					border-right: 4px solid transparent;
-				}
-		nav #search {
-			display: inline-block;
-			position: absolute;
-			height: 72px;
-		}
-			#search input {
-				width: 196px;
-				height: 30px;
-				margin: 24px 0 0 48px;
-				padding: 0 36px 0 8px;
-				border: 3px solid #7e7e8e;
-				border-radius: 3px;
-				background: #fbfaf5 url(../images/logo/search.png) right center no-repeat;
-				font-size: 21px;
-				font-family: Microsoft Yahei, Arial, sans-serif;
-				color: #7e7e8e;
-			}
-		nav h2 {
-			float: right;
-			height: 72px;
-			line-height: 81px;
-			padding-left: 48px;
-			color: #7e7e8e;
-			font-size: 32px;
-			font-weight: normal;
-			font-family: Times, sans-serif;
-			letter-spacing: .05em;
-			background: url(../images/logo/login.png) 12px 24px no-repeat;
-		}
-		nav h2 a {
-			color: #7e7e8e;
-			font-size: 32px;
-			font-weight: normal;
-			font-family: Microsoft Yahei, Arial, sans-serif;
-			transition: text-shadow .5s;
-			-webkit-transition: text-shadow .5s;
-			-moz-transition: text-shadow .5s;
-			-o-transition: text-shadow .5s;
-		}
-		nav h2 a:hover, nav h2 a:active {
-			text-shadow: 0 1px 2px rgba(0,0,0,.3);
-		}
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #f2f2f0; }
+  header nav {
+    width: 960px;
+    margin: 0 auto; }
+    header nav h1 {
+      display: inline-block;
+      height: 72px;
+      padding-left: 48px;
+      color: #7e7e8e;
+      background: url(../images/logo/logo.png) left center no-repeat;
+      font: normal 48px/72px Times, sans-serif; }
+      header nav h1 a {
+        color: #7e7e8e;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s; }
+      header nav h1 a:hover, header nav h1 a:active {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+      header nav h1 a#inherit {
+        letter-spacing: .05em;
+        font-size: 48px;
+        font-weight: normal;
+        font: normal 48px/72px Microsoft Yahei, Arial, sans-serif; }
+      header nav h1 a#sort {
+        padding-right: 12px;
+        letter-spacing: .05em;
+        font: normal 32px/81px Microsoft Yahei, Arial, sans-serif; }
+      header nav h1 .slideDown {
+        display: inline-block;
+        position: relative;
+        top: -10px;
+        right: -6px;
+        width: 0;
+        height: 0;
+        border-top: 3px solid #7e7e8e;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent; }
+    header nav #search {
+      display: inline-block;
+      position: absolute;
+      height: 72px; }
+      header nav #search input {
+        width: 196px;
+        height: 30px;
+        margin: 24px 0 0 48px;
+        padding: 0 36px 0 8px;
+        border: 3px solid #7e7e8e;
+        border-radius: 3px;
+        background: #fbfaf5 url(../images/logo/search.png) right center no-repeat;
+        font: normal 21px Microsoft Yahei, Arial, sans-serif;
+        color: #7e7e8e; }
+    header nav h2 {
+      float: right;
+      height: 72px;
+      line-height: 81px;
+      padding-left: 48px;
+      color: #7e7e8e;
+      font-size: 32px;
+      font-weight: normal;
+      font-family: Times, sans-serif;
+      letter-spacing: .05em;
+      background: url(../images/logo/login.png) 12px 24px no-repeat; }
+      header nav h2 a {
+        color: #7e7e8e;
+        font: normal 32px/81px Microsoft Yahei, Arial, sans-serif;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s; }
+      header nav h2 a:hover, header nav h2 a:active {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+
 #container {
-	width: 100%;
-	height: 600px;
-	background: url(../images/background.png) top center no-repeat;
-}
-	#content {
-		position: relative;
-		width: 960px;
-		margin: 0 auto;
-	}
-		#content aside {
-			display: inline-block;
-			width: 306px;
-			height: auto;
-			padding-top: 72px;
-		}
-			aside #find, aside #board {
-				position: relative;
-				width: 306px;
-			}
-			#find {
-				padding: 30px 0 24px 0;
-				margin: 0 0 72px 0;
-				background: rgba(251,250,245,.87);
-			}
-			#board {
-				padding: 30px 0 0 0;
-				background: #fed3b2;
-			}
-				aside h3 {
-					display: inline-block;
-					position: absolute;
-					top: -30px;
-					padding: 12px;
-					font: normal 28px Microsoft Yahei, Arial, sans-serif;
-					color: #fbfaf5;
-				}
-				#find h3 {
-					background: #01c3a8;
-				}
-				#board h3 {
-					background: #c63f39;
-				}
-				aside h3:before {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 100%;
-					width: 0;
-					height: 0;
-				}
-				#find h3:before {
-					border-top: 30px solid #01c3a8;
-					border-right: 10px solid transparent;
-					border-bottom: 30px solid transparent;
-					border-left: 10px solid #01c3a8;
-				}
-				#board h3:before {
-					border-top: 30px solid #c63f39;
-					border-right: 10px solid transparent;
-					border-bottom: 30px solid transparent;
-					border-left: 10px solid #c63f39;
-				}
-				aside h3:after {
-					content: "";
-					position: absolute;
-					top: 0;
-					right: -20px;
-					width: 0;
-					height: 0;
-				}
-				#find h3:after {
-					border-top: 15px solid transparent;
-					border-right: 5px solid #046153;
-					border-bottom: 15px solid #046153;
-					border-left: 5px solid transparent;
-				}
-				#board h3:after {
-					border-top: 15px solid transparent;
-					border-right: 5px solid #822824;
-					border-bottom: 15px solid #822824;
-					border-left: 5px solid transparent;
-				}
-				#find ul {
-					margin: 0 0 12px 0;
-				}
-					#find ul li a, #board ul li {
-						display: block;
-						height: 32px;
-						line-height: 32px;
-						padding: 0 12px;
-						color: #7e7e8e;
-						font-size: 18px;
-						font-weight: normal;
-						font-family: Microsoft Yahei, Arial, sans-serif;
-						transition: all .3s;
-						-webkit-transition: all .3s;
-						-moz-transition: all .3s;
-						-o-transition: all .3s;
-					}
-					 #find ul li a:hover {
-						background: #01c3a8;
-						color: #fbfaf5;
-					}
-				#find span {
-					position: relative;
-					left: 222px;
-				}
-				.turnPage {
-					display: inline-block;
-				}
-					.turnPage a {
-						display: inline-block;
-						width: 32px;
-						height: 32px;
-						line-height: 32px;
-						border-radius: 32px;
-						text-align: center;
-						background: #01c3a8;
-						color: #fbfaf5;
-						font-weight: bold;
-						font-family: "宋体", Arial, sans-serif;
-						transition: all .3s;
-						-webkit-transition: all .3s;
-						-moz-transition: all .3s;
-						-o-transition: all .3s;
-					}
-					.turnPage a:hover {
-						background: #fbfaf5;
-						color: #01c3a8;
-					}
-					.turnPage a.left:active {
-						position: relative;
-						left: -3px;
-					}
-					.turnPage a.right:active {
-						position: relative;
-						right: -3px;
-					}
-				#find input {
-					width: 282px;
-					height: 28px;
-					margin: 0 12px;
-					border: none;
-					border-radius: 3px;
-					background: #fbfaf5;
-					font-size: 24px;
-					font-family: Microsoft Yahei, Arial, sans-serif;
-					color: #7e7e8e;
-				}
-		#content #wait {
-			width: 
-		}
+  width: 100%;
+  height: 600px;
+  margin-top: 72px;
+  background: url(../images/background.png) top center no-repeat; }
+  #container #content {
+    position: relative;
+    width: 960px;
+    height: 100%;
+    margin: 0 auto; }
+    #container #content aside {
+      position: absolute;
+      display: inline-block;
+      width: 306px;
+      height: auto;
+      padding-top: 72px; }
+      #container #content aside h3 {
+        display: inline-block;
+        position: absolute;
+        top: -30px;
+        padding: 12px;
+        font: normal 28px Microsoft Yahei, Arial, sans-serif;
+        color: #fbfaf5; }
+      #container #content aside h3:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 0;
+        height: 0; }
+      #container #content aside h3:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 0;
+        height: 0; }
+      #container #content aside #find, #container #content aside #board {
+        position: relative;
+        width: 306px; }
+      #container #content aside #find {
+        padding: 30px 0 24px 0;
+        margin: 0 0 72px 0;
+        background: rgba(251, 250, 245, 0.87); }
+        #container #content aside #find h3 {
+          background: #01c3a8; }
+        #container #content aside #find h3:before {
+          border-top: 30px solid #01c3a8;
+          border-right: 10px solid transparent;
+          border-bottom: 30px solid transparent;
+          border-left: 10px solid #01c3a8; }
+        #container #content aside #find h3:after {
+          border-top: 15px solid transparent;
+          border-right: 5px solid #046153;
+          border-bottom: 15px solid #046153;
+          border-left: 5px solid transparent; }
+        #container #content aside #find ul {
+          margin: 0 0 12px 0; }
+        #container #content aside #find input {
+          width: 282px;
+          height: 28px;
+          margin: 0 12px;
+          border: none;
+          border-radius: 3px;
+          background: #fbfaf5;
+          font-size: 24px;
+          font-family: normal 32px/81px Microsoft Yahei, Arial, sans-serif;
+          color: #7e7e8e; }
+        #container #content aside #find span {
+          position: relative;
+          left: 222px; }
+      #container #content aside #board {
+        padding: 30px 0 0 0;
+        background: #fed3b2; }
+        #container #content aside #board h3 {
+          background: #c63f39; }
+        #container #content aside #board h3:before {
+          border-top: 30px solid #c63f39;
+          border-right: 10px solid transparent;
+          border-bottom: 30px solid transparent;
+          border-left: 10px solid #c63f39; }
+        #container #content aside #board h3:after {
+          border-top: 15px solid transparent;
+          border-right: 5px solid #822824;
+          border-bottom: 15px solid #822824;
+          border-left: 5px solid transparent; }
+      #container #content aside #find ul li a, #container #content aside #board ul li {
+        display: block;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 12px;
+        color: #7e7e8e;
+        font-size: 18px;
+        font-weight: normal;
+        font-family: Microsoft Yahei, Arial, sans-serif;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s; }
+      #container #content aside #find ul li a:hover {
+        background: #01c3a8;
+        color: #fbfaf5; }
+      #container #content aside .turnPage {
+        display: inline-block; }
+      #container #content aside .turnPage a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        text-align: center;
+        background: #01c3a8;
+        color: #fbfaf5;
+        font: bold 18px/32px sans-serif;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s; }
+      #container #content aside .turnPage a:hover {
+        background: #fbfaf5;
+        color: #01c3a8; }
+      #container #content aside .turnPage a.left:active {
+        position: relative;
+        left: -3px; }
+      #container #content aside .turnPage a.right:active {
+        position: relative;
+        right: -3px; }
+    #container #content #wait {
+      position: relative;
+      top: 72px;
+      width: 606px;
+      height: 960px;
+      margin-left: 354px;
+      background: rgba(251, 250, 245, 0.87); }
+      #container #content #wait h3 {
+        display: inline-block;
+        position: absolute;
+        top: -30px;
+        padding: 12px 18px;
+        font: normal 28px Microsoft Yahei, Arial, sans-serif;
+        color: #fbfaf5;
+        background: #01c3a8; }
+      #container #content #wait h3:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 0;
+        height: 0;
+        border-top: 30px solid #01c3a8;
+        border-right: 10px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 10px solid #01c3a8; }
+      #container #content #wait h3:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-right: 5px solid #046153;
+        border-bottom: 15px solid #046153;
+        border-left: 5px solid transparent; }
+      #container #content #wait ul {
+        padding: 30px 0 0 0; }
+        #container #content #wait ul li {
+          position: relative;
+          height: 58px;
+          margin: 0 12px;
+          padding: 6px 0;
+          border-bottom: 1px solid #7e7e8e; }
+          #container #content #wait ul li img.inherit-avator {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 58px;
+            height: 58px; }
+          #container #content #wait ul li .wrap {
+            position: relative;
+            margin-left: 71px; }
+            #container #content #wait ul li .wrap h4.inherit-name, #container #content #wait ul li .wrap p.inherit-intro, #container #content #wait ul li .wrap a.more {
+              font: normal 17px/29px Microsoft Yahei, Arial, sans-serif; }
+            #container #content #wait ul li .wrap h4.inherit-name, #container #content #wait ul li .wrap p.inherit-intro {
+              height: 29px;
+              color: #01c3a8; }
+            #container #content #wait ul li .wrap a.more {
+              position: absolute;
+              right: 0;
+              top: 11.5px;
+              padding: 0 8px;
+              border-radius: 3px;
+              background: #01c3a8;
+              color: #fbfaf5;
+              transition: 0.5s;
+              -webkit-transition: 0.5s;
+              -moz-transition: 0.5s;
+              -o-transition: 0.5s; }
+            #container #content #wait ul li .wrap a.more:hover, #container #content #wait ul li .wrap a.more:active {
+              background: #fbfaf5;
+              color: #01c3a8; }

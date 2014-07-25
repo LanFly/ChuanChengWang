@@ -1,0 +1,261 @@
+/*
+ * ChuanChengWang
+ *
+ * @author    Lancelot at EcjtuNet
+ * @version   1.0
+ * @last-time 2014.7.18
+ *
+ */
+/* file loading
+ ------------------------------------ */
+/*           CSS Reset           */
+/*
+ * http://meyerweb.com/eric/tools/css/reset/    v2.0 | 20110126
+ * License: none (public domain)
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summarytime, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a, a:link, a:visited {
+  text-decoration: none; }
+
+/* color
+ ------------------------------------- */
+/* font
+ ------------------------------------ */
+/* layout
+ ------------------------------------ */
+/* path
+ ------------------------------------ */
+header {
+  width: 100%;
+  height: 72px;
+  background: #f2f2f0; }
+
+nav {
+  width: 960px;
+  margin: 0 auto; }
+
+nav h1 {
+  display: inline-block;
+  height: 72px;
+  line-height: 72px;
+  padding-left: 48px;
+  color: #7e7e8e;
+  background: url(../images/logo/logo.png) left center no-repeat;
+  font-size: 48px;
+  font-weight: normal;
+  font-family: Times, sans-serif; }
+
+nav h1 a {
+  color: #7e7e8e;
+  transition: text-shadow .5s; }
+
+nav h1 a:hover, nav h1 a:active {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+
+nav h1 a#inherit {
+  letter-spacing: .05em;
+  font-size: 48px;
+  font-weight: normal;
+  font-family: Youyuan, Microsoft Yahei, Arial, sans-serif; }
+
+nav h1 a#sort {
+  padding-right: 12px;
+  letter-spacing: .05em;
+  font-size: 32px;
+  font-weight: normal;
+  font-family: Microsoft Yahei, Heiti, Arial, sans-serif; }
+
+.slideDown {
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  right: -6px;
+  width: 0;
+  height: 0;
+  border-top: 3px solid #7e7e8e;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent; }
+
+nav #search {
+  display: inline-block;
+  position: absolute;
+  height: 72px; }
+
+#search input {
+  width: 196px;
+  height: 30px;
+  margin: 24px 0 0 48px;
+  padding: 0 36px 0 8px;
+  border: 3px solid #7e7e8e;
+  border-radius: 3px;
+  background: #fbfaf5 url(../images/logo/search.png) right center no-repeat;
+  font-size: 21px;
+  font-family: Microsoft Yahei, Arial, sans-serif;
+  color: #7e7e8e; }
+
+nav h2 {
+  float: right;
+  height: 72px;
+  line-height: 81px;
+  padding-left: 48px;
+  color: #7e7e8e;
+  font-size: 32px;
+  font-weight: normal;
+  font-family: Times, sans-serif;
+  letter-spacing: .05em;
+  background: url(../images/logo/login.png) 12px 24px no-repeat; }
+
+nav h2 a {
+  color: #7e7e8e;
+  font-size: 32px;
+  font-weight: normal;
+  font-family: Microsoft Yahei, Arial, sans-serif;
+  transition: text-shadow .5s;
+  -webkit-transition: text-shadow .5s;
+  -moz-transition: text-shadow .5s;
+  -o-transition: text-shadow .5s; }
+
+nav h2 a:hover, nav h2 a:active {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+
+#container {
+  width: 100%;
+  height: 600px;
+  background: url(../images/background.png) top center no-repeat; }
+
+#info {
+  width: 950px;
+  height: 403px;
+  margin: 0 auto;
+  position: relative;
+  top: 70px;
+  border-top: 10px #01c3a8 solid;
+  background-color: #fbfaf5; }
+
+#info h3 {
+  position: absolute;
+  font: normal 36px Microsoft Yahei, Arial, sans-serif;
+  color: #01c3a8;
+  top: 20px;
+  left: 60px; }
+
+#name {
+  position: absolute;
+  left: 80px;
+  top: 90px; }
+
+#name li {
+  color: #01c3a8;
+  font: normal 24px/60px Microsoft Yahei, Arial, sans-serif;
+  text-align: center; }
+
+#input {
+  position: absolute;
+  left: 260px;
+  top: 90px; }
+
+#input li {
+  line-height: 60px; }
+
+#input li input {
+  width: 180px;
+  height: 25px;
+  padding: 0;
+  padding-left: 5px;
+  font: normal 20px/25px Microsoft Yahei, Arial, sans-serif;
+  border: 2px #00c3a7 solid;
+  border-radius: 5px; }
+
+#line {
+  width: 2px;
+  height: 300px;
+  background-color: #5ed9c7;
+  position: absolute;
+  left: 500px;
+  top: 90px; }
+
+#image {
+  width: 300px;
+  height: 300px;
+  left: 600px;
+  top: 120px;
+  position: absolute; }
+
+#image #display {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 75px;
+  top: 30px; }
+
+#image img {
+  width: 150px;
+  height: 150px; }
+
+#image input[type=file] {
+  position: absolute;
+  width: 68px;
+  height: 20px;
+  left: 75px;
+  top: 200px; }
+
+#image #ajaxup {
+  position: absolute;
+  width: 68px;
+  height: 22px;
+  left: 157px;
+  top: 200px;
+  padding: 1px 0; }
+
+#image #loading {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 138px;
+  top: 225px;
+  display: none; }
+
+#sub {
+  position: absolute;
+  left: 350px;
+  top: 410px; }
+
+#sub input {
+  width: 150px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 2px #2ac9a9 solid;
+  border-radius: 5px;
+  font-family: Microsoft Yahei, Arial, sans-serif;
+  font-size: 25px;
+  color: #2ac9a9;
+  cursor: pointer; }

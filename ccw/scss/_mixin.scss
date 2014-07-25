@@ -1,0 +1,6 @@
+@mixin transition($shadow: .5s) {
+	transition: $shadow;
+	-webkit-transition: $shadow;
+	-moz-transition: $shadow;
+	-o-transition: $shadow;
+}

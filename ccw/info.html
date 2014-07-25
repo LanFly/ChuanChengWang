@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zn-CH">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>传承网</title>
+	<link rel="stylesheet" href="./css/info-style.css" />
+	<link rel="shortcut icon" href="./images/logo/logo.png" />
+	<script src="./ajaxfileupload/jquery.js"></script>
+	<script src="./ajaxfileupload/ajaxfileupload.js"></script>
+
+	<!--  <script src="./scripts/jquery-1.11.0.js"></script> -->
+	<script src="./scripts/info.js"></script>
+</head>
+<body>
+	<header id="header">
+		<nav id="nav">
+			<h1 id="logo">
+				<a id="inherit" href="">传承网</a>|
+				<a id="sort" href="">分类<div class="slideDown"></div></a>
+			</h1>
+			<div id="search">
+				<form action="">
+					<input type="text">
+				</form>
+			</div>
+			<h2 id="login">
+				<a href="">个人中心 </a>|
+				<a href="">上传</a>
+			</h2>
+		</nav>
+	</header>
+	<div id="container">
+		<div id="second_nav_border">
+			<div id="second_nav">
+				<span id="inherit-rank">(n)</span>
+				<a href="">资料</a>
+				<span class="span-active">消息</span>
+				<a href="">上传</a>
+				<a href="">足迹</a>
+			</div>
+		</div>
+		<div id="info">
+			<h3>资料</h3>
+			<form method="post" action="" id="form">
+				<div id="name">
+					<ul>
+						<li>昵称</li>
+						<li>QQ</li>
+						<li>性别</li>
+						<li>学院</li>
+						<li>联系方式</li>
+						<li>介绍</li>
+					</ul>
+				</div>
+				<div id="input">
+					<ul>
+						<li><input type="text" name="nick" id="nick" /></li>
+						<li><input type="text" name="qq" id="qq" /></li>
+						<li><input type="radio" value="男" name="sex" class="radio" checked>男
+							<input type="radio" value="女" name="sex" class="radio">女</li>
+						<li><input type="text" name="college" id="college" /></li>
+						<li><input type="text" name="phone" id="phone" /></li>
+						<li><textarea name="intro" id="intro"></textarea></li>
+					</ul>
+				</div>
+				<div id="line"></div>
+			</form>
+			<div id="sub">
+					<input type="button" value="提交更改" id="signup" onclick="submit()" />
+			</div>
+			<div id="image">
+				<div id="display">
+					<img src="" id="displaytou" />
+				</div>
+				<form action="ajaxfileupload/doajaxfileupload.php" method="POST" enctype="multipart/form-data">
+					<input type="file" name="fileToUpload" id="fileToUpload" size="45" />
+				</form>
+					<input type="button" id="ajaxup" onclick="return ajaxFileUpload();" value="更改头像" />
+
+				<img src="ajaxfileupload/loading.gif" id="loading" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

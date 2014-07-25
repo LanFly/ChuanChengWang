@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zn-CH">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>传承网</title>
+	<link rel="stylesheet" href="./css/sign-style.css" />
+	<link rel="shortcut icon" href="./images/logo/logo.png" />
+	<script src="./ajaxfileupload/jquery.js"></script>
+	<script src="./ajaxfileupload/ajaxfileupload.js"></script>
+
+	<!--  <script src="./scripts/jquery-1.11.0.js"></script> -->
+	<script src="./scripts/sign.js"></script>
+</head>
+<body>
+	<header id="header">
+		<nav id="nav">
+			<h1 id="logo">
+				<a id="inherit" href="">传承网</a>|
+				<a id="sort" href="">分类<div class="slideDown"></div></a>
+			</h1>
+			<div id="search">
+				<form action="">
+					<input type="text">
+				</form>
+			</div>
+			<h2 id="login">
+				<a href="">个人中心 </a>|
+				<a href="">上传</a>
+			</h2>
+		</nav>
+	</header>
+	<div id="container">
+		<div id="info">
+			<h3>注册</h3>
+			<form method="post" action="" id="form">
+				<div id="name">
+					<ul>
+						<li>姓名</li>
+						<li>学号</li>
+						<li>身份证后四位</li>
+						<li>联系方式</li>
+						<li>密码</li>
+					</ul>
+				</div>
+				<div id="input">
+					<ul>
+						<li><input type="text" name="name" id="name_in" /></li>
+						<li><input type="text" name="stu_id" id="stu_id" /></li>
+						<li><input type="text" name="num" id="num" /></li>
+						<li><input type="text" name="phone" id="phone" /></li>
+						<li><input type="text" name="pass" id="pass" /></li>
+					</ul>
+				</div>
+				<div id="line"></div>
+				
+				
+			</form>
+			<div id="sub">
+					<input type="button" value="确认提交" id="signup" onclick="submit()" />
+			</div>
+			<div id="image">
+				<div id="display">
+					<img src="" id="displaytou" />
+				</div>
+				<form action="ajaxfileupload/doajaxfileupload.php" method="POST" enctype="multipart/form-data">
+					<input type="file" name="fileToUpload" id="fileToUpload" size="45" />
+				</form>
+					<button id="ajaxup" onclick="return ajaxFileUpload();">上传头像</button>
+				
+				<img src="ajaxfileupload/loading.gif" id="loading" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

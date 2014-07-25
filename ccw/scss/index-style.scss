@@ -1,0 +1,344 @@
+/*
+ * ChuanChengWang
+ *
+ * @author    Lancelot at EcjtuNet
+ * @version   1.0
+ * @last-time 2014.7.18
+ *
+ */
+
+
+
+/* file loading
+ ------------------------------------ */
+@import "reset";
+@import "variable";
+@import "mixin";
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $header-height;
+	background: #f2f2f0;
+	nav {
+		width: 960px;
+		margin: 0 auto;
+		h1 {
+			display: inline-block;
+			height: $header-height;
+			padding-left: 48px;
+			color: $gray;
+			background: url(../images/logo/logo.png) left center no-repeat;
+			font: $nav-h1-font;
+			a {
+				color: $gray;
+				@include transition;
+			}
+			a:hover, a:active {
+				text-shadow: 0 1px 2px rgba(0,0,0,.3);
+			}
+			a#inherit {
+				letter-spacing: .05em;
+				font-size: 48px;
+				font-weight: normal;
+				font: $inherit-font;
+			}
+			a#sort {
+				padding-right: 12px;
+				letter-spacing: .05em;
+				font: $a-font;
+			}
+			.slideDown {
+				display: inline-block;
+				position: relative;
+				top: -10px;
+				right: -6px;
+				width: 0;
+				height: 0;
+				border-top: 3px solid $gray;
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+			}
+		}
+		#search {
+			display: inline-block;
+			position: absolute;
+			height: 72px;
+			input {
+				width: 196px;
+				height: 30px;
+				margin: 24px 0 0 48px;
+				padding: 0 36px 0 8px;
+				border: 3px solid $gray;
+				border-radius: 3px;
+				background: $white $search-img right center no-repeat;
+				font: $input-font;
+				color: $gray;
+			}
+		}
+		h2 {
+			float: right;
+			height: $header-height;
+			line-height: 81px;
+			padding-left: 48px;
+			color: $gray;
+			font-size: 32px;
+			font-weight: normal;
+			font-family: Times, sans-serif;
+			letter-spacing: .05em;
+			background: $login-img 12px 24px no-repeat;
+			a {
+				color: $gray;
+				font: $a-font;
+				@include transition;
+			}
+			a:hover, a:active {
+				text-shadow: 0 1px 2px rgba(0,0,0,.3);
+			}
+		}
+	}
+}
+
+#container {
+	width: 100%;
+	height: 600px;
+	margin-top: 72px;
+	background: $bg-img top center no-repeat;
+	#content {
+		position: relative;
+		width: 960px;
+		height: 100%;
+		margin: 0 auto;
+		aside {
+			position: absolute;
+			display: inline-block;
+			width: $aside-width;
+			height: auto;
+			padding-top: 72px;
+			h3 {
+				display: inline-block;
+				position: absolute;
+				top: -30px;
+				padding: 12px;
+				font: normal 28px Microsoft Yahei, Arial, sans-serif;
+				color: $white;
+			}
+			h3:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 100%;
+				width: 0;
+				height: 0;
+			}
+			h3:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: -20px;
+				width: 0;
+				height: 0;
+			}
+			#find, #board {
+				position: relative;
+				width: 306px;
+			}
+			#find {
+				padding: 30px 0 24px 0;
+				margin: 0 0 72px 0;
+				background: rgba(251,250,245,.87);
+				h3 {
+					background: #01c3a8;
+				}
+				h3:before {
+					border-top: 30px solid #01c3a8;
+					border-right: 10px solid transparent;
+					border-bottom: 30px solid transparent;
+					border-left: 10px solid #01c3a8;
+				}
+				h3:after {
+					border-top: 15px solid transparent;
+					border-right: 5px solid #046153;
+					border-bottom: 15px solid #046153;
+					border-left: 5px solid transparent;
+				}
+				ul {
+					margin: 0 0 12px 0;
+				}
+				input {
+					width: 282px;
+					height: 28px;
+					margin: 0 12px;
+					border: none;
+					border-radius: 3px;
+					background: $white;
+					font-size: 24px;
+					font-family: $a-font;
+					color: $gray;
+				}
+				span {
+					position: relative;
+					left: 222px;
+				}
+			}
+			#board {
+				padding: 30px 0 0 0;
+				background: $cherry;
+				h3 {
+					background: $red;
+				}
+				h3:before {
+					border-top: 30px solid $red;
+					border-right: 10px solid transparent;
+					border-bottom: 30px solid transparent;
+					border-left: 10px solid $red;
+				}
+				h3:after {
+					border-top: 15px solid transparent;
+					border-right: 5px solid #822824;
+					border-bottom: 15px solid #822824;
+					border-left: 5px solid transparent;
+				}
+			}
+			#find ul li a, #board ul li {
+				display: block;
+				height: 32px;
+				line-height: 32px;
+				padding: 0 12px;
+				color: $gray;
+				font-size: 18px;
+				font-weight: normal;
+				font-family: Microsoft Yahei, Arial, sans-serif;
+				transition: all .3s;
+				-webkit-transition: all .3s;
+				-moz-transition: all .3s;
+				-o-transition: all .3s;
+			}
+			#find ul li a:hover {
+				background: #01c3a8;
+				color: $white;
+			}
+			.turnPage {
+				display: inline-block;
+			}
+				.turnPage a {
+					display: inline-block;
+					width: 32px;
+					height: 32px;
+					border-radius: 32px;
+					text-align: center;
+					background: #01c3a8;
+					color: $white;
+					font: bold 18px/32px sans-serif;
+					transition: all .3s;
+					-webkit-transition: all .3s;
+					-moz-transition: all .3s;
+					-o-transition: all .3s;
+				}
+				.turnPage a:hover {
+					background: $white;
+					color: #01c3a8;
+				}
+				.turnPage a.left:active {
+					position: relative;
+					left: -3px;
+				}
+				.turnPage a.right:active {
+					position: relative;
+					right: -3px;
+				}
+		}
+		#wait {
+			position: relative;
+			top: 72px;
+			width: 606px;
+			height: 960px;
+			margin-left: $aside-width + 48px;
+			background: rgba(251,250,245,.87);
+			h3 {
+				display: inline-block;
+				position: absolute;
+				top: -30px;
+				padding: 12px 18px;
+				font: normal 28px Microsoft Yahei, Arial, sans-serif;
+				color: $white;
+				background: #01c3a8;
+			}
+			h3:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 100%;
+				width: 0;
+				height: 0;
+				border-top: 30px solid #01c3a8;
+				border-right: 10px solid transparent;
+				border-bottom: 30px solid transparent;
+				border-left: 10px solid #01c3a8;
+			}
+			h3:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: -20px;
+				width: 0;
+				height: 0;
+				border-top: 15px solid transparent;
+				border-right: 5px solid #046153;
+				border-bottom: 15px solid #046153;
+				border-left: 5px solid transparent;
+			}
+
+			ul {
+				padding: 30px 0 0 0;
+				li {
+					position: relative;
+					height: 58px;
+					margin: 0 12px;
+					padding: 6px 0;
+					border-bottom: 1px solid $gray;
+
+
+					img.inherit-avator {
+						position: absolute;
+						top: 6px;
+						left: 6px;
+						width: 58px;
+						height: 58px;
+					}
+
+
+
+					.wrap {
+						position: relative;
+						margin-left: 71px;
+
+						h4.inherit-name, p.inherit-intro, a.more {
+							font: $wait-font;
+						}
+						h4.inherit-name, p.inherit-intro {
+							height: 29px;
+							color: $green;
+						}
+						a.more {
+							position: absolute;
+							right: 0;
+							top: (46px - 23px)/2;
+							padding: 0 8px;
+							border-radius: 3px;
+							background: $green;
+							color: $white;
+							@include transition;
+						}
+						a.more:hover, a.more:active {
+							background: $white;
+							color: $green;
+						}
+					}
+				}
+			}
+		}
+	}
+}

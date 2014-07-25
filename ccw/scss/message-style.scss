@@ -1,0 +1,207 @@
+/*
+ * ChuanChengWang
+ *
+ * @author    Lancelot at EcjtuNet
+ * @version   1.0
+ * @last-time 2014.7.18
+ *
+ */
+
+
+
+/* file loading
+ ------------------------------------ */
+@import "reset";
+@import "variable";
+@import "mixin";
+
+header {
+	width: 100%;
+	height: 72px;
+	background: #f2f2f0;
+}
+	nav {
+		width: 960px;
+		margin: 0 auto;
+	}
+		nav h1 {
+			display: inline-block;
+			height: 72px;
+			line-height: 72px;
+			padding-left: 48px;
+			color: #7e7e8e;
+			background: url(../images/logo/logo.png) left center no-repeat;
+			font-size: 48px;
+			font-weight: normal;
+			font-family: Times, sans-serif;
+		}
+			nav h1 a {
+				color: #7e7e8e;
+				transition: text-shadow .5s;
+			}
+			nav h1 a:hover, nav h1 a:active {
+				text-shadow: 0 1px 2px rgba(0,0,0,.3);
+			}
+			nav h1 a#inherit {
+				letter-spacing: .05em;
+				font-size: 48px;
+				font-weight: normal;
+				font-family: youyuan, Microsoft Yahei, Arial, sans-serif;
+			}
+			nav h1 a#sort {
+				padding-right: 12px;
+				letter-spacing: .05em;
+				font-size: 32px;
+				font-weight: normal;
+				font-family: Microsoft Yahei, heiti, Arial, sans-serif;
+			}
+				.slideDown {
+					display: inline-block;
+					position: relative;
+					top: -10px;
+					right: -6px;
+					width: 0;
+					height: 0;
+					border-top: 3px solid #7e7e8e;
+					border-left: 4px solid transparent;
+					border-right: 4px solid transparent;
+				}
+		nav #search {
+			display: inline-block;
+			position: absolute;
+			height: 72px;
+		}
+			#search input {
+				width: 196px;
+				height: 30px;
+				margin: 24px 0 0 48px;
+				padding: 0 36px 0 8px;
+				border: 3px solid #7e7e8e;
+				border-radius: 3px;
+				background: #fbfaf5 url(../images/logo/search.png) right center no-repeat;
+				font-size: 21px;
+				font-family: Microsoft Yahei, Arial, sans-serif;
+				color: #7e7e8e;
+			}
+		nav h2 {
+			float: right;
+			height: 72px;
+			line-height: 81px;
+			padding-left: 48px;
+			color: #7e7e8e;
+			font-size: 32px;
+			font-weight: normal;
+			font-family: Times, sans-serif;
+			letter-spacing: .05em;
+			background: url(../images/logo/login.png) 12px 24px no-repeat;
+		}
+		nav h2 a {
+			color: #7e7e8e;
+			font-size: 32px;
+			font-weight: normal;
+			font-family: Microsoft Yahei, Arial, sans-serif;
+			transition: text-shadow .5s;
+			-webkit-transition: text-shadow .5s;
+			-moz-transition: text-shadow .5s;
+			-o-transition: text-shadow .5s;
+		}
+		nav h2 a:hover, nav h2 a:active {
+			text-shadow: 0 1px 2px rgba(0,0,0,.3);
+		}
+#container {
+	width: 100%;
+	/*height: 600px;*/
+	background: url(../images/background.png) top center no-repeat;
+}
+#second_nav_border{
+	height: 50px;
+	width: 950px;
+	top: 30px;
+	position: relative;
+	margin: 0 auto;
+}
+#second_nav{
+	width: 450px;
+	height: 50px;
+	position: relative;
+	font: normal 36px/50px Microsoft Yahei, Arial, sans-serif;
+	color: white;
+	span, a{
+		float: left;
+		display: inline-block;
+		height: 50px;
+		padding: 0 10px;
+		background: $green;
+		color: $white;
+	}
+	#inherit-rank {
+		background: darken($green, 10%);
+		margin-right: 10px;
+	}
+	.span-active {
+		background: $white;
+		color: $green;
+	}
+}
+#info{
+	width: 950px;
+	/*height: 600px;*/
+	margin: 0 auto;
+	position: relative;
+	top: 30px;
+	/*border-top: 10px #01c3a8 solid;*/
+	background-color: $white;
+	span, p {
+		font: normal 18px/36px Microsoft Yahei, Microsoft Jhenghei, Arial, sans-serif;
+	}
+	h3{
+		font: normal 36px Microsoft Yahei, Arial, sans-serif;
+		color: #01c3a8;
+		padding: 20px 60px 0;
+	}
+	#line{
+		position: relative;
+		width: 840px;
+		height: 1px;
+		top: 40px;
+		left: 60px;
+		margin-bottom: 40px;
+		background-color: #01c3a8;
+	}
+	#request{
+		position: relative;
+		width: 840px;
+		top: 20px;
+		left: 60px;
+		li{
+			font-size: 18px;
+			color: #01c3a8;
+			line-height: 30px;
+			.font{
+				font-size: 25px;
+			}
+		}
+		.right{
+			float: right;
+		}
+	}
+	#recorde{
+		position: relative;
+		width: 840px;
+		top: 20px;
+		left: 60px;
+		li{
+			font-size: 18px;
+			width: 840px;
+			font: normal 18px/30px Microsoft Yahei, Arial, sans-serif;
+			text-align: left;
+			color: $green;
+			span {
+				color: $green;
+			}
+		}
+		.right{
+			float: right;
+		}
+	}
+}
