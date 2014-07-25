@@ -172,6 +172,9 @@ nav h2 a:hover, nav h2 a:active {
     padding: 0 10px;
     background: #01c3a8;
     color: #fbfaf5; }
+  #second_nav a:hover, #second_nav a:active {
+    background: #fbfaf5;
+    color: #01c3a8; }
   #second_nav #inherit-rank {
     background: #01907c;
     margin-right: 10px; }

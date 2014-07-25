@@ -134,6 +134,10 @@ header {
 		background: $green;
 		color: $white;
 	}
+	a:hover, a:active {
+		background: $white;
+		color: $green;
+	}
 	#inherit-rank {
 		background: darken($green, 10%);
 		margin-right: 10px;

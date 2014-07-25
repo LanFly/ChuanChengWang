@@ -111,7 +111,7 @@ header {
 		}
 #container {
 	width: 100%;
-	/*height: 600px;*/
+	min-height: 540px;
 	background: url(../images/background.png) top center no-repeat;
 }
 #second_nav_border{
@@ -135,6 +135,10 @@ header {
 		background: $green;
 		color: $white;
 	}
+	a:hover, a:active {
+		background: $white;
+		color: $green;
+	}
 	#inherit-rank {
 		background: darken($green, 10%);
 		margin-right: 10px;
@@ -151,37 +155,49 @@ header {
 	position: relative;
 	top: 30px;
 	/*border-top: 10px #01c3a8 solid;*/
-	background-color: #ffffff;
+	background-color: $white;
+	h3 {
+		padding: 20px 60px 0;
+		font: normal 36px Microsoft Yahei, Arial, sans-serif;
+		color: $green;
+	}
+	ul#foot{
+		padding: 0 60px 24px 60px;
+		li{
+			position: relative;
+			font: normal 18px/30px Microsoft Yahei, Arial, sans-serif;
+			color: $green;
+			border-bottom: 2px solid $green;
+			img.tou{
+				position: absolute;
+				width: 150px;
+				height: 88px;
+				border: 1px solid $green;
+			}
+			h4, p {
+				padding-left: 150px + 12px;
+				margin: 24px 0;
+			}
+			h4 {
+				font: normal 24px/36px Microsoft Yahei, Arial, sans-serif;
+			}
+			span {
+				margin: 0 12px;
+			}
+			a {
+				float: right;
+				display: inline-block;
+				height: 30px;
+				padding: 0 9px;
+				font: normal 18px/30px Times, sans-serif;
+				background: $white;
+				color: $green;
+				border-radius: 3px;
+			}
+			a:hover, a:active {
+				background: $green;
+				color: $white;
+			}
+		}
+	}
 }
-#info h3{
-	position: relative;
-	font-size: 36px;
-	font-family: Times, sans-serif;
-	color: #01c3a8;
-	top: 20px;
-	left: 60px;
-}
-#info #foot{
-	position: relative;
-	width: 840px;
-	top: 20px;
-	left: 60px;
-}
-#info #foot li{
-	width: 840px;
-	font-size: 18px;
-	color: #01c3a8;
-	line-height: 30px;
-}
-#info #foot #tou{
-	/*position: absolute;*/
-	width: 150px;
-	height: 150px;
-	top: 10px;
-}
-#info #foot a{
-	float: right;
-	color: $green;
-	font: normal 14px Microsoft Yahei, Arial, sans-serif;
-}
-
